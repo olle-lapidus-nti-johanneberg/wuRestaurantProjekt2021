@@ -11,12 +11,12 @@ div#gridWrapper {
     height: 100vh;
     background-color: white;
 
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 5fr 1fr;
     grid-template-rows: 3fr 1fr 7fr;
     grid-template-areas:
     "he he"
     "na na"
-    "as ma"
+    "ma as"
     ;
     grid-gap: 2px;
 }
@@ -29,8 +29,9 @@ div#gridWrapper #header {
     grid-area: he;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    overflow: hidden;
 }
 
 div#gridWrapper #header p {
@@ -41,14 +42,40 @@ div#gridWrapper #header p {
 div#gridWrapper #nav {
     background-color: #ffa36c;
     grid-area: na;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
 }
+
+div#gridWrapper #nav a {
+    text-decoration: none;
+    color: #a20a0a;
+    display: inline-block;
+    border-width: 2px;
+    border-color: #a20a0a;
+    padding: 100% 25px;
+}
+
+div#gridWrapper #nav a:hover, a:active {
+    background-color: red;
+  }
 
 div#gridWrapper #aside {
     background-color: #799351;
     grid-area: as;
+    color: #f6eec9;
+    text-align: center;
+}
+
+div#gridWrapper #aside h {
+    font-size: 25px;
 }
 
 div#gridWrapper #main {
     background-color: #f6eec9;
     grid-area: ma;
+    color: #799351;
 }
+
