@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+div#gridWrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 3fr 1fr 7fr;
+    grid-template-areas:
+    "he he"
+    "na na"
+    "as ma"
+    ;
+    grid-gap: 2px;
+}
+
+
+
+
+div#gridWrapper #header {
+    background-color: #a20a0a;
+    grid-area: he;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div#gridWrapper #header p {
+    font-size: 100px;
+    color: #ffa36c;
+}
+
+div#gridWrapper #nav {
+    background-color: #ffa36c;
+    grid-area: na;
+}
+
+div#gridWrapper #aside {
+    background-color: #799351;
+    grid-area: as;
+}
+
+div#gridWrapper #main {
+    background-color: #f6eec9;
+    grid-area: ma;
+}

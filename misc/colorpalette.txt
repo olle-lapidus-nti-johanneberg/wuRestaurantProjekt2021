@@ -1,0 +1,6 @@
+Colors:
+
+#a20a0a
+#ffa36c
+#f6eec9
+#799351
