@@ -17,3 +17,15 @@ window.onload = function() {
     loadInHeader();
 }
 
+
+window.onscroll = function() {
+    var navbar = document.getElementById("nav");
+    var sticky = document.getElementById("header").offsetHeight;
+
+    if (window.pageYOffset >= sticky) {
+        navbar.style.position = "fixed";
+    } else {
+        navbar.style.position = "sticky";
+    }
+};
+
