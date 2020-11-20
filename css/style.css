@@ -8,25 +8,46 @@
 div#gridWrapper {
     display: grid;
     width: 100vw;
-    height: 100vh;
+    max-width: 100%;
+    height: 36vh;
     background-color: white;
 
     grid-template-columns: 5fr 1fr;
-    grid-template-rows: 3fr 1fr 7fr;
+    grid-template-rows: 3fr 1fr;
     grid-template-areas:
     "he he"
     "na na"
-    "ma as"
     ;
     grid-gap: 2px;
 }
 
 
+div#gridWrapper2 {
+    margin-top: 2px;
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    background-color: white;
+
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas:
+    "ma as"
+    ;
+    grid-gap: 2px;
+}
+
+@keyframes fadeIn {
+    from    {opacity: 0.5;}
+    to      {opacity: 1;}
+}
 
 
 div#gridWrapper #header {
     background-color: #a20a0a;
     grid-area: he;
+    animation: fadeIn;
+    animation-duration: 2s;
 
     display: flex;
     justify-content: space-evenly;
@@ -34,7 +55,8 @@ div#gridWrapper #header {
     overflow: hidden;
 }
 
-div#gridWrapper #header p {
+div#gridWrapper #header h1 {
+    width: 60vw;
     font-size: 100px;
     color: #ffa36c;
 }
@@ -62,18 +84,18 @@ div#gridWrapper #nav a:hover, a:active {
     background-color: red;
   }
 
-div#gridWrapper #aside {
+div#gridWrapper2 #aside {
     background-color: #799351;
     grid-area: as;
     color: #f6eec9;
     text-align: center;
 }
 
-div#gridWrapper #aside h {
+div#gridWrapper2 #aside h {
     font-size: 25px;
 }
 
-div#gridWrapper #main {
+div#gridWrapper2 #main {
     background-color: #f6eec9;
     grid-area: ma;
     color: #799351;
