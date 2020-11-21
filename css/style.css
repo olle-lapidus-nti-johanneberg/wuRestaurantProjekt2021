@@ -68,16 +68,22 @@ div#gridWrapper #nav {
 }
 
 div#gridWrapper #nav a {
+    flex: 1;
+    text-align: center;
+    border-style: solid;
+    border: 1px 0px;
     text-decoration: none;
     color: #a20a0a;
     display: inline-block;
     border-width: 2px;
     border-color: #a20a0a;
     padding: 100% 25px;
+    transition: background-color 300ms, color 300ms;
 }
 
 div#gridWrapper #nav a:hover, a:active {
-    background-color: red;
+    background-color: #a20a0a;
+    color: #ffa36c;
   }
 
 div#gridWrapper2 #aside {
@@ -126,9 +132,33 @@ div#gridWrapper2 #main div#images {
     margin-top: 30px;
 }
 
-div#gridWrapper2 #main div#images img {
+div#gridWrapper2 #main div#images .imageContainer {
+    height: 200px;
+}
+
+div#gridWrapper2 #main div#images .imageContainer img {
+    transition: filter 300ms;
     filter: opacity(0.85);
-    max-height: 100%
+    height: 200px;
+}
+
+div#gridWrapper2 #main div#images .imageContainer:hover img {
+    transition: filter 300ms;
+    filter: opacity(0.2);
+    height: 200px;
+}
+
+div#gridWrapper2 #main div#images .imageContainer h3 {
+    transition: filter 300ms;
+    filter: opacity(0);
+    font-size: 30px;
+    position: relative;
+    transform: translate(0%, -350%);
+}
+
+div#gridWrapper2 #main div#images .imageContainer:hover h3 {
+    transition: filter 300ms;
+    filter: opacity(1);
 }
 
 div#gridWrapper2 #main h {
