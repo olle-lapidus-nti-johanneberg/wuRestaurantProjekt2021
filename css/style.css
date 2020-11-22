@@ -82,7 +82,7 @@ div#gridWrapper #nav a {
     transition: background-color 300ms, color 300ms;
 }
 
-div#gridWrapper #nav a:hover, a:active {
+div#gridWrapper #nav a:hover, div#gridWrapper #nav a:active {
     background-color: #a20a0a;
     color: #ffa36c;
   }
@@ -167,6 +167,20 @@ div#gridWrapper2 #main div#images .imageContainer:hover h3 {
 
 div#gridWrapper2 #main h {
     font-size: 25px;
+}
+
+div#gridWrapper2 #main #socialMediaHeader {
+    margin-top: 300px;
+}
+
+div#gridWrapper2 #main #socialMedia {
+    display: flex;
+    justify-content: center;
+}
+
+div#gridWrapper2 #main #socialMedia img {
+    height: 100px;
+    margin: 10px 40px;
 }
 
 div#gridWrapper2 #main .menu {
