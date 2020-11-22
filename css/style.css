@@ -60,6 +60,7 @@ div#gridWrapper #nav {
     grid-area: na;
     height: 50px;
     width: 100%;
+    z-index: 10;
 
     display: flex;
     justify-content: space-around;
@@ -93,22 +94,29 @@ div#gridWrapper2 #aside {
     text-align: center;
 }
 
-div#gridWrapper2 #aside div {
+
+div#gridWrapper2 #aside div.info {
+    position: absolute;
     border-style: solid;
     border-color: black;
+    background-color: #799351;
     margin: 40px 20px;
     padding: 10px;
 }
 
-div#gridWrapper2 #aside div h1 {
+div#gridWrapper2 #aside div.info#contact {
+    top: 80%;
+}
+
+div#gridWrapper2 #aside div.info h1 {
     margin: 10px;
 }
 
-div#gridWrapper2 #aside div h2 {
+div#gridWrapper2 #aside div.info h2 {
     font-size: 18px;
 }
 
-div#gridWrapper2 #aside div p {
+div#gridWrapper2 #aside div.infor p {
     margin-bottom: 5px;
 }
 
@@ -164,3 +172,42 @@ div#gridWrapper2 #main div#images .imageContainer:hover h3 {
 div#gridWrapper2 #main h {
     font-size: 25px;
 }
+
+div#gridWrapper2 #main .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+div#gridWrapper2 #main .menu .menuItem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div#gridWrapper2 #main .menu .menuItem p.item {
+    width: 200px;
+}
+
+div#gridWrapper2 #main .menu .menuItem p.price {
+    flex: 2;
+}
+
+div#gridWrapper2 #main .menu .menuItem img {
+    height: 70px;
+    margin-left: 70px;
+}
+
+/* Bra verktyg för att hitta rätt filter för rätt färg: https://codepen.io/sosuke/pen/Pjoqqp */
+/* Bra verktyg för att hitta nice hex-koder: https://www.color-hex.com/color-names.html */
+div#gridWrapper2 #main .menu .menuItem img#green {
+    filter: invert(25%) sepia(89%) saturate(6711%) hue-rotate(122deg) brightness(96%) contrast(107%);
+}
+
+div#gridWrapper2 #main .menu .menuItem img#red {
+    filter: invert(26%) sepia(86%) saturate(6196%) hue-rotate(24deg) brightness(98%) contrast(101%);
+}
+
+div#gridWrapper2 #main .menu .menuItem img#orange {
+    filter: invert(50%) sepia(82%) saturate(2224%) hue-rotate(0deg) brightness(105%) contrast(101%);
+}
+
