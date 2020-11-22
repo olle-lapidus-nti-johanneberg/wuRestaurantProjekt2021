@@ -27,7 +27,7 @@ div#gridWrapper2 {
     display: grid;
     width: 100vw;
     max-width: 100%;
-    height: 100vh;
+    min-height: 64vh;
     background-color: white;
 
     grid-template-columns: 5fr 1fr;
@@ -90,22 +90,18 @@ div#gridWrapper #nav a:hover, a:active {
 div#gridWrapper2 #aside {
     background-color: #799351;
     grid-area: as;
-    color: #f6eec9;
     text-align: center;
 }
 
 
 div#gridWrapper2 #aside div.info {
-    position: absolute;
+    max-width: 165px;
     border-style: solid;
     border-color: black;
-    background-color: #799351;
+    background-color: #f6eec9;
+    color: #799351;
     margin: 40px 20px;
     padding: 10px;
-}
-
-div#gridWrapper2 #aside div.info#contact {
-    top: 80%;
 }
 
 div#gridWrapper2 #aside div.info h1 {
@@ -116,7 +112,7 @@ div#gridWrapper2 #aside div.info h2 {
     font-size: 18px;
 }
 
-div#gridWrapper2 #aside div.infor p {
+div#gridWrapper2 #aside div.info p {
     margin-bottom: 5px;
 }
 
@@ -233,5 +229,5 @@ div#gridWrapper2 #main .menu .menuItem img#gradientColorSauce {
 }
 
 div#gridWrapper2 #main .menu .menuItem img#purple {
-    filter: invert(15%) sepia(85%) saturate(3932%) hue-rotate(354deg) brightness(85%) contrast(119%);
+    filter: invert(20%) sepia(88%) saturate(4341%) hue-rotate(278deg) brightness(77%) contrast(138%);
 }

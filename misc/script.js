@@ -17,8 +17,11 @@ function loadInPage() {
     if (index < header_text.length) {
         header_element.textContent += header_text.charAt(index);
         index++;
+        setTimeout(loadInPage, 80);
+    } else {
+        setTimeout(loadInPage, 1000);
     }
-    setTimeout(loadInPage, 80);
+    
 }
 
 window.onload = function() {
