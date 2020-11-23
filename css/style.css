@@ -117,7 +117,7 @@ div#gridWrapper2 #aside div.info p {
 }
 
 div#gridWrapper2 #aside div a {
-    color: #f6eec9;
+    color: #799351;
 }
 
 div#gridWrapper2 #main {
@@ -129,27 +129,34 @@ div#gridWrapper2 #main {
 }
 
 div#gridWrapper2 #main div#images {
-    display:flex;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 200px;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    height: 220px;
+    margin: 30px 40px;
 }
 
 div#gridWrapper2 #main div#images .imageContainer {
-    height: 200px;
+    height: 220px;
+    margin-bottom: 50px;
+    width: 281px;
+    overflow: hidden;
+    text-align: center;
 }
 
 div#gridWrapper2 #main div#images .imageContainer img {
     transition: filter 300ms;
     filter: opacity(0.85);
-    height: 200px;
+    height: 220px;
+    margin-left: -9999%;
+    margin-right: -9999%;
 }
 
 div#gridWrapper2 #main div#images .imageContainer:hover img {
     transition: filter 300ms;
     filter: opacity(0.2);
-    height: 200px;
+    height: 220px;
 }
 
 div#gridWrapper2 #main div#images .imageContainer h3 {
@@ -170,7 +177,8 @@ div#gridWrapper2 #main h {
 }
 
 div#gridWrapper2 #main #socialMediaHeader {
-    margin-top: 300px;
+    margin-top: 350px;
+    margin-bottom: 10px;
 }
 
 div#gridWrapper2 #main #socialMedia {
