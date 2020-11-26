@@ -14,15 +14,38 @@
         </main>
         <div id="about">OM oss</div>
         <section id="imageGrid">
-            <div id="sauce"><img src="img/sauce.jpg"></div>
-            <div id="hands"><img src="img/hands.jpg"></div>
-            <div id="happyCustomer"><img src="img/happy_customer.jpg"></div>
-            <div id="chefs"><img src="img/chefs.jpg"></div>
+            <div class="hands" id="image-one">
+                <img src="img/chefs.jpg">
+                <h1 id="hoverHeader"></h1>
+                <p id="hoverP"></p>
+            </div>
+
+            <div class="sauce" id="image-two">
+                <img src="img/sauce.jpg" onmouseover="hoverImage('image-two');" onmouseout="unHoverImage('image-two');">
+                <h1 id="hoverHeader">Smarriga</h1>
+                <p id="hoverP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ipsam.
+                    Harum obcaecati quaerat at assumenda dignissimos consequuntur numquam reprehenderit facilis?
+                </p>
+            </div>
+
+            <div class="happyCustomer" id="image-three">
+                <img src="img/happy_customer.jpg" onmouseover="hoverImage('image-three');" onmouseout="unHoverImage('image-three');">
+                <h1 id="hoverHeader">Glada</h1>
+                <p id="hoverP">Hej på dig Lorem..
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, consequuntur?
+                </p>
+            </div>
+
+            <div class="hands" id="image-four">
+                <img src="img/hands.jpg" onmouseover="hoverImage('image-four');" onmouseout="unHoverImage('image-four');">
+                <h1 id="hoverHeader">Kock</h1>
+                <p id="hoverP">Hej på Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odio voluptate veniam obcaecati, sit expedita earum, unde atque, deleniti dolor quidem alias at labore sint.</p>
+            </div>
 
         </section>
         <footer id="footer">Fotare</footer> 
     </div>
 
-
+    <script src="js/script.js"></script>
 </body>
 </html>

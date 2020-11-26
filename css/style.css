@@ -37,8 +37,30 @@ img {
     "a1 a6";
 }
 
-#imageGrid #hands {
+#imageGrid #image-one {
     grid-area: a1;
+    text-align: center;
+    position: relative;
+}
+
+#imageGrid #image-one h1 {
+    z-index: 10;
+    color: black;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+}
+
+#imageGrid #image-one p {
+    z-index: 10;
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #gridWrapper #imageGrid div {
@@ -46,5 +68,6 @@ img {
 }
 
 #gridWrapper #imageGrid img {
+    transition: filter 0.5s;
     filter: grayscale(1) opacity(0.5);
 }
