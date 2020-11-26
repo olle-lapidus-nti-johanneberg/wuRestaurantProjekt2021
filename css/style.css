@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap');
+
+
 * {
     margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    --color1: #a20a0a;
+    --color2: #ffa36c;
+    --color3: #799351;
+    --color4: #f6eec9;   
 }
 
 img {
@@ -9,9 +17,25 @@ img {
     object-position: center;
 }
 
+#navbar ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+#navbar ul li {
+    flex: 1;
+    display: flex;
+    text-align: center;
+}
+#navbar ul a {
+    flex: 1;
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
 #gridWrapper {
     display: grid;
-    grid-template-rows: 100vh 50vh 100vh 50vh;
+    grid-template-rows: 100vh 100vh 50vh;
 }
 
 #gridWrapper #landingPage {
@@ -24,8 +48,21 @@ img {
     justify-content: space-around;
 }
 
+#gridWrapper #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#gridWrapper #about #section-left {
+    background-color: var(--color2);
+}
+
+#gridWrapper #about #section-right {
+    background-color: var(--color4);
+}
 
 
+/* Image grid */
 #gridWrapper #imageGrid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -35,12 +72,7 @@ img {
     "a1 a2"
     "a1 a3"
     "a1 a6";
-}
 
-#imageGrid #image-one {
-    grid-area: a1;
-    text-align: center;
-    position: relative;
 }
 
 #imageGrid #image-one h1 {
@@ -51,9 +83,11 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -200%);
+    color: var(--color1);
 }
 
 #imageGrid #image-one p {
+    width: 50vw;
     z-index: 10;
     color: black;
     font-size: 30px;
@@ -61,6 +95,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: var(--color1);
 }
 
 #gridWrapper #imageGrid div {
@@ -70,4 +105,10 @@ img {
 #gridWrapper #imageGrid img {
     transition: filter 0.5s;
     filter: grayscale(1) opacity(0.5);
+}
+
+#imageGrid #image-one {
+    grid-area: a1;
+    text-align: center;
+    position: relative;
 }

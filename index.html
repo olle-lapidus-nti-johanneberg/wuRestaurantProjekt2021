@@ -8,11 +8,25 @@
 </head>
 <body>
     
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="index.html">Hej</a>
+            </li>
+            <li>
+                <a href="index.html">På</a>
+            </li>
+            <li>
+                <a href="index.html">Dig</a>
+            </li>
+        </ul>
+    </nav>
+
     <div id="gridWrapper">
         <main id="landingPage">
             <h1 id="mainHeader">Smarriga såser</h1>
         </main>
-        <div id="about">OM oss</div>
+        
         <section id="imageGrid">
             <div class="hands" id="image-one">
                 <img src="img/chefs.jpg">
@@ -21,7 +35,9 @@
             </div>
 
             <div class="sauce" id="image-two">
-                <img src="img/sauce.jpg" onmouseover="hoverImage('image-two');" onmouseout="unHoverImage('image-two');">
+                <img src="img/tomato_sauce.jpg" 
+                    onmouseover="hoverImage('image-two'); index = 0; hovering = true;" 
+                    onmouseout="hovering = false;">
                 <h1 id="hoverHeader">Smarriga</h1>
                 <p id="hoverP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ipsam.
                     Harum obcaecati quaerat at assumenda dignissimos consequuntur numquam reprehenderit facilis?
@@ -29,7 +45,9 @@
             </div>
 
             <div class="happyCustomer" id="image-three">
-                <img src="img/happy_customer.jpg" onmouseover="hoverImage('image-three');" onmouseout="unHoverImage('image-three');">
+                <img src="img/happy_customer.jpg" 
+                    onmouseover="hoverImage('image-three'); index = 1; hovering = true;" 
+                    onmouseout="hovering = false;">
                 <h1 id="hoverHeader">Glada</h1>
                 <p id="hoverP">Hej på dig Lorem..
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, consequuntur?
@@ -37,8 +55,10 @@
             </div>
 
             <div class="hands" id="image-four">
-                <img src="img/hands.jpg" onmouseover="hoverImage('image-four');" onmouseout="unHoverImage('image-four');">
-                <h1 id="hoverHeader">Kock</h1>
+                <img src="img/hands.jpg" 
+                    onmouseover="hoverImage('image-four'); index = 2; hovering = true;" 
+                    onmouseout="hovering = false;">
+                <h1 id="hoverHeader">Kärleksfulla</h1>
                 <p id="hoverP">Hej på Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odio voluptate veniam obcaecati, sit expedita earum, unde atque, deleniti dolor quidem alias at labore sint.</p>
             </div>
 
