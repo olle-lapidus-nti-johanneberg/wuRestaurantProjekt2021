@@ -17,25 +17,55 @@ img {
     object-position: center;
 }
 
-#navbar ul {
-    display: flex;
-    padding: 0;
-    list-style: none;
+#navbar {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    filter: opacity(0%);
 }
+
+#navbar ul {
+    height: 100%;
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
 #navbar ul li {
     flex: 1;
-    display: flex;
     text-align: center;
+    background-color: #999999;
 }
+
+#navbar ul img {
+    width: calc(calc(vw / 4) - 50px);
+    height: auto;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
 #navbar ul a {
-    flex: 1;
-    background-color: var(--color1);
-    color: var(--color2);
+    transition: color 400ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #090909;
 }
+
+#navbar ul a:hover {
+    color: var(--color1);
+}
+
 
 #gridWrapper {
     display: grid;
-    grid-template-rows: 100vh 100vh 50vh;
+    grid-template-rows: 100vh calc(100vh - 70px) 50vh;
 }
 
 #gridWrapper #landingPage {
@@ -76,25 +106,25 @@ img {
 }
 
 #imageGrid #image-one h1 {
-    z-index: 10;
+    z-index: 8;
     color: black;
     font-size: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -150%);
     color: var(--color1);
 }
 
 #imageGrid #image-one p {
     width: 50vw;
-    z-index: 10;
+    z-index: 8;
     color: black;
     font-size: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -0%);
     color: var(--color1);
 }
 

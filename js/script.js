@@ -39,11 +39,22 @@ let hovering = false;
 window.onload = hoverHulululu;
 
 
-
 window.addEventListener("scroll", function() {
-    var navbar = document.getElementById("navbar");
-    
-   // if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-     //   alert("You've scrolled past the second div");
-    //}
-  });
+    let scroll_position = window.scrollY;
+
+    if (scroll_position < 300) {
+        document.getElementById("navbar").style.filter = 'opacity(0%)';
+        document.getElementById("navbar").style.height = '270px';
+    }
+    else if (scroll_position >= 300 && scroll_position < 500) {
+        let opacity = (scroll_position - 300)/2;
+        let height = (500 - scroll_position) + 80
+        document.getElementById("navbar").style.filter = 'opacity(' + opacity + '%)';
+        document.getElementById("navbar").style.height = height + "px";
+    }
+    else
+    {
+        document.getElementById("navbar").style.filter = 'opacity(100%)';
+        document.getElementById("navbar").style.height = "80px";
+    }
+})
