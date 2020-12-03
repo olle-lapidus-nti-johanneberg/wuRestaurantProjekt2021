@@ -70,7 +70,7 @@ img {
 
 #gridWrapper {
     display: grid;
-    grid-template-rows: 100vh calc(100vh - 70px) 80px 50vh;
+    grid-template-rows: 100vh calc(100vh - 70px);
 }
 
 #gridWrapper #landingPage {
@@ -191,4 +191,12 @@ img {
 
 #gridWrapper #footer div {
     flex: 1;
+}
+
+
+/* menu */
+
+#menu #gridWrapperMenu {
+    display: grid;
+    grid-template-rows: repeat(100vh, 4);
 }
