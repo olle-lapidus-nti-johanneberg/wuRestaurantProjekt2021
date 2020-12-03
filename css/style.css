@@ -36,15 +36,20 @@ img {
 #navbar ul li {
     flex: 1;
     text-align: center;
-    background-color: #999999;
+    background-color: var(--color2);
+}
+
+#navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #navbar ul img {
     width: calc(calc(vw / 4) - 50px);
     height: auto;
     object-fit: contain;
-    margin-top: 10px;
-    margin-left: 4px;
+    margin-left: 5px;
 }
 
 #navbar ul a {
@@ -65,7 +70,7 @@ img {
 
 #gridWrapper {
     display: grid;
-    grid-template-rows: 100vh calc(100vh - 70px) 50vh;
+    grid-template-rows: 100vh calc(100vh - 70px) 80px 50vh;
 }
 
 #gridWrapper #landingPage {
@@ -76,6 +81,33 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+@keyframes dropshadow-color {
+    0% {
+        filter: drop-shadow(5px 5px 5px var(--color1));
+    }
+    20% {
+        filter: drop-shadow(5px 5px 5px var(--color2));
+    }
+    40% {
+        filter: drop-shadow(5px 5px 5px var(--color3));
+    }
+    60% {
+        filter: drop-shadow(5px 5px 5px var(--color4));
+    }
+    80% {
+        filter: drop-shadow(5px 5px 5px var(--color2));
+    }
+    100% {
+        filter: drop-shadow(5px 5px 5px var(--color1));
+    }
+}
+
+#gridWrapper #landingPage #mainHeader {
+    animation: dropshadow-color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 #gridWrapper #about {
@@ -141,4 +173,22 @@ img {
     grid-area: a1;
     text-align: center;
     position: relative;
+}
+
+#gridWrapper leg {
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+
+#gridWrapper #footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#gridWrapper #footer div {
+    flex: 1;
 }

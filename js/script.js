@@ -44,7 +44,7 @@ window.addEventListener("scroll", function() {
 
     if (scroll_position < 300) {
         document.getElementById("navbar").style.filter = 'opacity(0%)';
-        document.getElementById("navbar").style.height = '270px';
+        document.getElementById("navbar").style.height = '0px';
     }
     else if (scroll_position >= 300 && scroll_position < 500) {
         let opacity = (scroll_position - 300)/2;
