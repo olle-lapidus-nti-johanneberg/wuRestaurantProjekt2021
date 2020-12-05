@@ -199,21 +199,27 @@ img {
 /* menu */
 
 #menu #gridWrapperMenu {
+    transition: background-image 1s;
     display: grid;
-    grid-template-rows: 100vh repeat(2, calc(100vh - 70px) 40px) calc(100vh - 70px);
+    grid-template-rows: 100vh 30px repeat(2, calc(100vh - 70px) 40px) calc(100vh - 70px);
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
         "la la la"
+        "br br br"
         "fr fr b1"
         "aa aa aa"
         "b2 vr vr"
         "bb bb bb"
         "er er b3"
     ;
-    background-image: url("../img/sauce_bigresolution.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-image:
+    linear-gradient(black, white),
+    url("../img/sauce_bigresolution.jpg")
+    ;
+    background-blend-mode: saturation;
 }
 
 #menu #gridWrapperMenu #landing {
@@ -223,8 +229,15 @@ img {
     height: 100%;
     justify-content: space-around;
     align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../img/sauce_bigresolution.jpg"); 
+}
 
-    
+#menu #gridWrapperMenu #break {
+    grid-area: br;
+    background-color: var(--color1);
 }
 
 #menu #gridWrapperMenu #landing a {
@@ -271,4 +284,77 @@ img {
 #menu section#afterfood {
     grid-area: er;
     background-color: var(--color4);
+}
+
+#menu .menu-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+
+.menu-section .menuItem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-section .menuHeader {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.menu-section .menuItem p.item {
+    width: 300px;
+    margin: 15px;
+}
+
+.menu-section .menuItem p.price {
+    flex: 2;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.menu-section .menuItem img {
+    object-fit: normal;
+    object-position: normal;
+    height: 70px;
+    width: auto;
+    margin-left: 70px;
+}
+
+/* Bra verktyg för att hitta rätt filter för rätt färg: https://codepen.io/sosuke/pen/Pjoqqp */
+/* Bra verktyg för att hitta nice hex-koder: https://www.color-hex.com/color-names.html */
+.menu-section .menuItem img#green {
+    filter: invert(25%) sepia(89%) saturate(6711%) hue-rotate(122deg) brightness(96%) contrast(107%);
+}
+
+.menu-section .menuItem img#yellow {
+    filter: invert(93%) sepia(42%) saturate(5597%) hue-rotate(355deg) brightness(108%) contrast(107%);
+}
+
+.menu-section .menuItem img#orange {
+    filter: invert(50%) sepia(82%) saturate(2224%) hue-rotate(0deg) brightness(105%) contrast(101%);
+}
+
+.menu-section .menuItem img#brown {
+    filter: invert(30%) sepia(8%) saturate(5499%) hue-rotate(347deg) brightness(98%) contrast(94%);
+}
+
+.menu-section .menuItem img#red {
+    filter: invert(15%) sepia(85%) saturate(3932%) hue-rotate(354deg) brightness(85%) contrast(119%);
+}
+
+.menu-section .menuItem img#pink {
+    filter: invert(25%) sepia(95%) saturate(5355%) hue-rotate(317deg) brightness(104%) contrast(101%);
+}
+
+.menu-section .menuItem img#gradientColorSauce {
+    transition: filter 300ms;
+    filter: invert(15%) sepia(85%) saturate(3932%) hue-rotate(354deg) brightness(85%) contrast(119%);
+}
+
+.menu-section .menuItem img#purple {
+    filter: invert(20%) sepia(88%) saturate(4341%) hue-rotate(278deg) brightness(77%) contrast(138%);
 }
