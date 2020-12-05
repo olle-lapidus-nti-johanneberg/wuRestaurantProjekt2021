@@ -3,13 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="menu">
+    <nav id="navbar">
+        <ul id="nav">
+            <li>
+                <img src="img/smarriga_saser.png">
+            </li>
+            <li>
+                <a href="index.html">Hem</a>
+            </li>    
+            <li>
+                <a href="menu.html">Meny</a>
+            </li>
+            <li>
+                <a href="https://www.google.com">Nån tredje stans</a>
+            </li>
+        </ul>
+    </nav>
+
     <div id="gridWrapperMenu">
         <main id="landing">
-            landing
+            <a href="#apetizers">
+                <div id="link-apetizers" class="link-div">
+                    <p>Förrätter</p>
+                    <span>&#8681;</span>
+                </div>
+            </a>
+            
+            <a href="#hotfood">
+                <div id="link-hotfood" class="link-div">
+                    <span>&#8681;</span>
+                    <p>Huvudrätter</p>
+                </div>
+            </a>
+            
+            <a href="#afterfood">
+                <div id="link-afterfood" class="link-div">
+                    <p>Efterrätter</p>
+                    <span>&#8681;</span>
+                </div>
+            </a>
+            
         </main>
         <section id="apetizers">
             apet
@@ -17,9 +54,10 @@
         <section id="hotfood">
             hot
         </section>
-        <section id="afterfod">
+        <section id="afterfood">
             after
         </section>
     </div>
+    <script src="js/navbar.js"></script>
 </body>
 </html>
