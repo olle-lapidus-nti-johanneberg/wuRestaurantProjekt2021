@@ -244,6 +244,10 @@ img {
     border: solid;
     border-width: 30px 0px;
     border-color: var(--color1);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../img/sauce_bigresolution.jpg"); 
 }
 
 #menu #gridWrapperMenu #break3 {

@@ -8,8 +8,8 @@ hoverImage = function(image) {
     let img = document.getElementById(image);
     img.children[0].style.filter = "grayscale(0%)";
     document.getElementById("image-one").children[0].style.filter = "opacity(0.2)";
-    document.getElementById("image-one").children[1].textContent = img.children[1].textContent;
-    document.getElementById("image-one").children[2].textContent = img.children[2].textContent;
+    document.getElementById("image-one").children[1].innerHTML = img.children[1].innerHTML;
+    document.getElementById("image-one").children[2].innerHTML = img.children[2].innerHTML;
 }
 
 unHoverImage = function(image) {
