@@ -32,7 +32,7 @@
 
     <h3>2.1 Handskiss</h3>
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
-    <img src="../img/first_sketch.png" style="width: 100vw;">
+    <img src="../img/documentation/first_sketch.png" style="width: 100vw;">
 
 
     <h3>2.2 Gällande första sidan</h3>
@@ -119,16 +119,37 @@
         Till nästa gång jag gör något liknande bör jag tänka på att inte göra en funktion som kallar en annan funktion som motverkar det den första funktionen gör...
         Dessutom bör jag tänka på att låta mina element vara variabler istället för att skriva ut document.getElementById(id) varje gång...
     </p>
-    <img src="../img/documentation_1.JPG" style="width:500px;">
+    <img src="../img/documentation/documentation_1.JPG" style="width:500px;">
 
     <h3>Lektion vecka 49</h3>
     <!-- Fyll på med dokumentation här. -->¨
     <p> Jag började med att göra färdigt index-sidan. Jag bestämde mig för att simplifiera ner den rätt rejält från min skiss,
         då det blev lite för klottrigt annars.</p>
     <p> Jag skissade på menu-sidan, och började koda på den:</p>
-    <img src="../img/skiss_menu.JPG" style="height:500px;">
+    <img src="../img/documentation/skiss_menu.JPG" style="height:500px;">
     <p>Jag tänker mig att det ska kunna länka från landing till längre ner i sidan, 
         till avsnitten för-, varm- och efterrätter.
+    </p>
+
+    <p>Efter lektionen satt jag mycket med meny-sidan. Jag stylade sidan på en del olika sätt.
+        Jag ville väldigt gärna att bakgrunden skulle övergå från att vara färgad till svartvit,
+        för att dra fokus till bakgrunden på landing page men till menyerna sedan när användaren scrollat ner.
+        Detta lyckades jag till slut fixa med hjälp av att kombinera en svartvit linear-gradient med den vanliga bakgrunden
+        i de områden där jag ville ha svartvit bakgrund. För att övergången inte skulle bli ful la jag till en enfärgad
+        div mellan de två bakgrundsareorna.
+    </p> 
+    <img src="../img/documentation/menu-background-difference.JPG" style="width:500px;>
+    <p>
+        När jag nu hade flera olika sidor som skulle använda olika javascriptfunktioner var jag tvungen att ändra om lite där.
+        Jag bestämde mig för att ha en "index.js", där koden endast index.html använde låg. Sedan en menu.js..
+        Eftersom bägge använde sig av navbar-funktionerna skapade jag en tredje fil "navbar.js" för denna.
+    </p>
+    <p>
+        Att få länkarna i landing page i menu.html att scrolla exakt till respektive meny visade sig vara en utmaning.
+        Eftersom navbaren skymde övre delen av menyn om jag scrollade exakt till startpositionen av diven var jag tvungen att komma på
+        en annan metod.
+        Till slut insåg jag att istället för att använda a-taggar kunde jag lägga till onclick-funktioner i länkarnas divar,
+        och därmed med javascript bestämma exakt vart sidan skulle scrollas vid klick (vilket var startpsitionen minus navbarens höjd).
     </p>
 
     <h3>Lektion vecka 50</h3>
