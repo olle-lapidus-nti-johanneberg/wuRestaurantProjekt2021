@@ -369,7 +369,7 @@ img {
 }
 
 .menu-section .menuItem img#gradientColorSauce {
-    transition: filter 300ms;
+    transition: filter 10ms;
     filter: invert(15%) sepia(85%) saturate(3932%) hue-rotate(354deg) brightness(85%) contrast(119%);
 }
 
