@@ -262,7 +262,7 @@ img {
     text-decoration: none;
 }
 
-#menu #gridWrapperMenu #landing .link-div {
+#menu #gridWrapperMenu #landing .link-div, #about #aboutGridWrapper #links .link-div {
     transition: color, background-color 0.2s;
     display: flex;
     flex-direction: row;
@@ -280,11 +280,11 @@ img {
     padding: 10px;
 }
 
-#menu #gridWrapperMenu #landing .link-div p {
+#menu #gridWrapperMenu #landing .link-div p, #about #aboutGridWrapper #links .link-div p {
     flex: 1;
 }
 
-#menu #gridWrapperMenu #landing .link-div:hover {
+#menu #gridWrapperMenu #landing .link-div:hover, #about #aboutGridWrapper #links .link-div:hover {
     color: var(--color1);
     background-color: var(--color2);
 }
@@ -375,4 +375,74 @@ img {
 
 .menu-section .menuItem img#purple {
     filter: invert(20%) sepia(88%) saturate(4341%) hue-rotate(278deg) brightness(77%) contrast(138%);
+}
+
+
+/* about */
+
+#about #aboutGridWrapper {
+    display: grid;
+    grid-template-rows: 50vh 50vh calc(100vh - 70px) 100vh auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "la la"
+        "li li"
+        "wh vi"
+        "so so"
+        "re re"
+    ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../img/sauce_bigresolution.jpg");
+}
+
+#about #landing {
+    grid-area: la;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about #landing img {
+    width: 80%;
+    height: auto;
+    object-fit: normal;
+    object-position: center;
+
+    animation: dropshadow-color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#about #links {
+    grid-area: li;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#about #aboutGridWrapper #links .link-div {
+    width: 40%;
+    height: 18%;
+}
+
+#links .link-div#vision, #links .link-div#reviews {
+    text-align: right;
+}
+
+#about #who {
+    grid-area: wh;
+}
+
+#about #our-vision {
+    grid-area: vi;
+}
+
+#about #our-social-media {
+    grid-area: so;
+}
+
+#about #our-reviews {
+    grid-area: re;
 }

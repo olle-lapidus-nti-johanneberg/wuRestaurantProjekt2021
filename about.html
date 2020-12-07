@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Om oss</title>
 </head>
-<body>
+<body id="about">
     <nav id="navbar">
         <ul id="nav">
             <li>
@@ -19,11 +19,54 @@
                 <a href="menu.html">Meny</a>
             </li>
             <li id="">
-                <a href="https://www.google.com">Nån tredje stans</a>
+                <a href="about.html">Om oss</a>
             </li>
         </ul>
     </nav>
 
+    <div id="aboutGridWrapper">
+        <main id="landing">
+            <img src="img/smarriga_saser.png">
+        </main>
+        <section id="links">
+            <div id="who-are-we" class="link-div" onclick="scrollWhoVision()">
+                <p>Vilka är vi?</p>
+                <span>&#8681;</span>
+            </div>
+            
+            <div id="vision" class="link-div" onclick="scrollWhoVision()">
+                <span>&#8681;</span>
+                <p>Vår vision</p>
+            </div>
+            
+            <div id="social-media" class="link-div" onclick="scrollSocialMedia()">
+                <p>Hitta oss på social media!</p>
+                <span>&#8681;</span>
+            </div>
+            <div id="reviews" class="link-div" onclick="scrollReviews()">
+                <span>&#8681;</span>
+                <p>Nöjda kunder!</p>
+            </div>
+
+        </section>
+        <aside id="who">
+            who 
+        </aside>
+        <aside id="our-vision">
+            vision
+        </aside>   
+        <div id="our-social-media">
+            social media
+        </div>
+        <section id="our-reviews">
+            review
+        </section>
+
+    </div>
+
     <img src="img/review.JPG">
+    
+    <script src="js/about.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>
