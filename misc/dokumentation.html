@@ -50,9 +50,27 @@
         samt hur man länkar till en bild av en google maps location.
     </p>
     <p>
+        En annan grej jag insåg under arbetet med denna sidan var att det var väldigt svårt att byta color theme på
+        sin sida efter att i början ha valt sina huvudfärger - för att byta var jag tvungen att ändra varje förekomst
+        av färgerna.
+        Detta lärde jag mig ett knep för att motverka, som jag använde mig av i andra sidan: 
+        Om man i början av sitt css-dokument har
+    </p>
+    <p>
+        * {<br>
+            --color1: #000000;<br>
+            --color2: #abcabc;<br>
+        }
+    </p>
+    <p>
+        Kan man senare använda sig av var(--color1); istället för att skriva in hex-koden. Detta gör att man
+        kan ändra alla förekomster genom att endast ändra denna första variabeldeklaration.
+    </p>
+    <p>
         Denna sidan finns tillgänglig på <a href="https://github.com/olle-lapidus-nti-johanneberg/wuRestaurantProjekt2021">GitHub</a>. 
         Den slutgiltiga sidan ligger i en annan <a href="https://github.com/olle-lapidus-nti-johanneberg/wuRestaurantProjekt2021/tree/v2">branch</a>.
     </p>
+
 
     <h3>2.3 Schema</h3>
     <!-- Vad ska du göra när? Inte för detaljerat. -->
@@ -176,6 +194,11 @@
 
     <p>Jag började skissa på about-sidan:</p>
     <img src="../img/documentation/skiss_about.JPG" style="height:500px;">
+
+    <p>
+        Härnäst kodade jag och stylade about-sidan. Jag avvek lite grann från skissen, men grunden är densamma.
+        
+    </p>
 
     <h3>Lektion vecka 50</h3>
     <!-- Fyll på med dokumentation här. -->

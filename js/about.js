@@ -1,7 +1,12 @@
 
-function scrollWhoVision() {
+function scrollVision() {
     window.scrollTo(window.scrollX, 
         document.getElementById("our-vision").offsetTop - 70);
+}
+
+function scrollWho() {
+    window.scrollTo(window.scrollX, 
+        document.getElementById("who").offsetTop - 70);
 }
 
 function scrollSocialMedia() {

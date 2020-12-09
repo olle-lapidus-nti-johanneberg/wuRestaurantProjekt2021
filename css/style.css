@@ -47,8 +47,8 @@ img {
 }
 
 #navbar ul img {
-    width: calc(calc(vw / 4) - 50px);
-    height: auto;
+    width: auto;
+    height: 60px;
     object-fit: contain;
     margin-left: 5px;
 }
@@ -67,8 +67,6 @@ img {
 #navbar ul a:hover {
     color: var(--color1);
 }
-
-
 
 #gridWrapper {
     display: grid;
@@ -382,12 +380,13 @@ img {
 
 #about #aboutGridWrapper {
     display: grid;
-    grid-template-rows: 50vh 50vh calc(100vh - 70px) 100vh auto;
+    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 100vh auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "la la"
         "li li"
-        "wh vi"
+        "wh aa"
+        "bb vi"
         "so so"
         "re re"
     ;
@@ -431,12 +430,38 @@ img {
     text-align: right;
 }
 
-#about #who {
-    grid-area: wh;
+#about #who, #about #our-vision {
+    border: solid;
+    border-color: var(--color1);
+    background-color: var(--color2);
+    border-width: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#about #who img {
+    height: 100%;
+    width: auto;
+    filter: invert(78%) sepia(34%) saturate(100%) hue-rotate(314deg) brightness(100%) contrast(101%);
+}
+
+#about #our-vision img {
+    height: 100%;
+    width: auto;
+    filter: invert(15%) sepia(42%) saturate(5074%) hue-rotate(353deg) brightness(103%) contrast(101%);
+    transform: rotate(180deg);
+}
+
+#about #who p, #about #our-vision p {
+    color: var(--color1);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
 }
 
 #about #our-vision {
     grid-area: vi;
+    background-color: var(--color2);
 }
 
 #about #our-social-media {
