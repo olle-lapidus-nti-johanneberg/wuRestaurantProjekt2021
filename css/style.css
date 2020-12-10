@@ -138,7 +138,7 @@ img {
 
 }
 
-#imageGrid #image-one h1 {
+#imageGrid #image-one h2 {
     z-index: 8;
     color: black;
     font-size: 100px;
@@ -335,8 +335,7 @@ img {
 }
 
 .menu-section .menuItem img {
-    object-fit: normal;
-    object-position: normal;
+    object-fit: fill;
     height: 70px;
     width: auto;
     margin-left: 70px;
@@ -382,7 +381,7 @@ img {
 
 #about #aboutGridWrapper {
     display: grid;
-    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 30vh auto;
+    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 50vh auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "la la"
@@ -409,7 +408,7 @@ img {
 #about #landing img {
     width: 80%;
     height: auto;
-    object-fit: normal;
+    object-fit: fill;
     object-position: center;
 
     animation: dropshadow-color;
@@ -509,8 +508,7 @@ img {
     transition: transform 0.5s;
     height: 70%;
     width: auto;
-    object-fit: normal;
-    object-position: normal;
+    object-fit: fill;
 }
 
 #our-social-media div:hover img {

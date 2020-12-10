@@ -211,13 +211,53 @@
         fortfarande inte nöjd men jag tror att nuvarande versionen får duga.
     </p> 
     <p>
-        Jag validerade min kod och upptäckte att jag missat en hel del alt-taggar
+        Jag validerade all min HTML-kod och upptäckte att jag missat en hel del alt-taggar
         på bilder, så jag fixade detta.
-        </p>
+        Jag hade dessutom använt id där jag borde använt class på något stäle (eftersom
+        det var flera likartade element och inte bara ett) så jag ändrade detta.
+    </p>
+    <p>
+        När jag validerade min CSS insåg jag att jag använt oject-fit: normal;, trots att 
+        normal inte är ett giltigt värde. Det blev dock galet på hemsidan när jag
+        tog bort detta. Anledningen var att den när jag skrev ett värde den inte kände igen
+        bestämde sig för att använda default-värdet, alltså object-fit: fill;. 
+        Jag bytte ut alla oject-fit: normal; mot detta, och då funkade allt som det skulle.
+    </p>
 
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+    <p>
+        Chrome hade jag använt hela projektet igenom; därför var allt redan fungerande där.
+    </p>
+    <p>
+        Edge hade däremot väldigt problem med css-filter, upptäckte jag när jag testade där.
+        Dessutom verkar den inte kunna använda backgrond-blend-mode. Detta resulterade i att min meny-sida
+        blev riktigt ful på edge
+    </p>
+    <p>Edge:</p>
+    <img src="../img/documentation/edge_bad.JPG" style="width:400px;">
+    <p>Chrome:</p>
+    <img src="../img/documentation/chrome_good.JPG" style="width:400px;">
+
+    <p>
+        Med hjälp av en JavaScript-funktion som kollade om man befann sig på Edge, och i det fallet
+        ändrade hela grid-strukturen på meny-sidan så att mellanrummen togs bort, lyckades jag lösa
+        problemet med att bakgrunden blev en ful gradient.
+    </p>
+    <p>
+        Dock kunde jag inte ändra filtrerna. Jag gissar att Edge kanske inte kan bearbeta filter som
+        är mer än 100% stora, och eftersom jag har t.ex saturate(6711%) på vissa meny-items blir det nog
+        problematiskt pga det. Jag skulle kunna fixa det genom att faktiskt redigera paint-stroke-bilden
+        till 20 olika bilder i olika färger, men då måste den ta upp 20 gånger mer plats; och jag har
+        hellre en platseffektiv sida som laddar in snabbt än är lite mer tilltalande för edge-användare.
+    </p>
+    <p>
+        Utöver att färgerna som gavs av CSS-filter blev lite konstiga var sidan fullt funktionell på Edge.
+    </p>
+    <p>
+        På FireFox fungerade allt precis som på Chrome.
+    </p>
 
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
