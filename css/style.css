@@ -71,6 +71,7 @@ img {
 #gridWrapper {
     display: grid;
     grid-template-rows: 100vh calc(100vh - 70px);
+    max-width: 100%;
 }
 
 #gridWrapper #landingPage {
@@ -218,6 +219,7 @@ img {
     url("../img/sauce_bigresolution.jpg")
     ;
     background-blend-mode: saturation;
+    max-width: 100%;
 }
 
 #menu #gridWrapperMenu #landing {
@@ -380,7 +382,7 @@ img {
 
 #about #aboutGridWrapper {
     display: grid;
-    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 100vh auto;
+    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 30vh auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "la la"
@@ -394,6 +396,7 @@ img {
     background-size: cover;
     background-attachment: fixed;
     background-image: url("../img/sauce_bigresolution.jpg");
+    max-width: 100%;
 }
 
 #about #landing {
@@ -466,6 +469,53 @@ img {
 
 #about #our-social-media {
     grid-area: so;
+    display: flex;
+    align-items: center;
+}
+
+#our-social-media a {
+    width: 0;
+    margin-left: 20vw;
+    flex: 0;
+}
+
+#our-social-media header {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    margin-left: 30px;
+    border: solid;
+    border-width: 6px;
+    border-color: black;
+    border-radius: 15px;
+    background-color: var(--color4);
+    height: 25vh;
+}
+
+#our-social-media div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 25vh;
+    border: solid;
+    border-width: 6px;
+    border-color: black;
+    border-radius: 15px;
+    background-color: var(--color4);
+}
+
+#our-social-media div img {
+    transition: transform 0.5s;
+    height: 70%;
+    width: auto;
+    object-fit: normal;
+    object-position: normal;
+}
+
+#our-social-media div:hover img {
+    transition: transform 0.5s;
+    transform: rotate(360deg);
 }
 
 #about #our-reviews {
