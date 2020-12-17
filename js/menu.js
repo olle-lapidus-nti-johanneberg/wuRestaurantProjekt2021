@@ -36,7 +36,6 @@ function loadInPage() {
 
 window.onload = loadInPage;
 
-
 if (window.navigator.userAgent.indexOf("Edge") > -1) {
     console.log("hej");
     document.getElementById("gridWrapperMenu").style.gridTemplateAreas = "'la la la' 'br br br' 'fr fr fr' 'aa aa aa' 'vr vr vr''bb bb bb''er er er'";

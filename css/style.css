@@ -5,9 +5,9 @@
     margin: 0;
     font-family: 'Noto Sans JP', sans-serif;
     --color1: #a20a0a;
-    --color2: #ffa36c;
+    --color2: #FFE4D5;
     --color3: #799351;
-    --color4: #f6eec9;   
+    --color4: #F9D6FF;   
     scroll-behavior: smooth;
 }
 
@@ -24,6 +24,9 @@ img {
     width: 100%;
     height: 70px;
     filter: opacity(0%);
+    border: solid;
+    border-width: 0px 0px 4px 0px;
+    border-color: var(--color1);
 }
 
 #navbar ul {
@@ -381,7 +384,7 @@ img {
 
 #about #aboutGridWrapper {
     display: grid;
-    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 50vh auto;
+    grid-template-rows: 50vh 50vh calc(100vh - 70px) calc(100vh - 70px) 50vh calc(100vh - 70px);
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "la la"
@@ -518,4 +521,17 @@ img {
 
 #about #our-reviews {
     grid-area: re;
+    background-color: var(--color2);
+    border: solid;
+    border-width: 30px 0px 0px 0px;
+    border-color: var(--color1);
+    text-align: center;
 }
+
+#about #our-reviews .review-header {
+    color: var(--color1);
+    font-size: 40px;
+}
+
+#about #our-reviews #review-canvas {
+} 
