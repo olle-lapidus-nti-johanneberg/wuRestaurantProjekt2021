@@ -534,4 +534,7 @@ img {
 }
 
 #about #our-reviews #review-canvas {
+    border: solid;
+    border-width: 20px 0px;
+    border-color: var(--color1);
 } 
