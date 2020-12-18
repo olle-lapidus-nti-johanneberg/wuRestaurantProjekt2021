@@ -65,6 +65,8 @@ updateReview = function() {
     setTimeout(updateReview, 1000);
 }
 
+
+
 var drawingCanvas = {
     canvas : document.getElementById("review-canvas"),
     start : function () {
@@ -77,12 +79,15 @@ var drawingCanvas = {
         this.context = this.canvas.getContext("2d");
         this.interval = setInterval(this.draw, 15);
         this.balls = []
-        for (let i = 0; i < (Math.random() + 0.5) * 20; i++) {
+        for (let i = 0; i < (Math.random() + 0.5) * 60; i++) {
             this.balls.push(
                 new Ball(100 + Math.random() * (this.width - 200), 100 + Math.random() * (this.height - 200), 
-                Math.random() * 50, (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10)
+                (Math.random() + 0.5) * 20, (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10)
             )
         }
+        this.balls[0].color = "#0F7833";
+        this.balls[1].color = "#D5B534";
+        this.balls[2].color = "#E1E1E1";
     },
     draw : function() {
         ctx = drawingCanvas.context;
@@ -93,6 +98,8 @@ var drawingCanvas = {
         }
     }
 }
+
+
 
 
 class Ball {
@@ -127,13 +134,45 @@ class Ball {
             this.y = this.width;
         } 
         else if (this.y + this.width > drawingCanvas.height) {
-            this.y_speed = -((Math.random() + 0.1) * 10);
+            this.y_speed = -((Math.random() + 0.1) * 12);
             this.y = drawingCanvas.height - this.width;
         }
 
     }
+    punch = function(x, y) {
+        if ((x - this.x) ** 2 < this.width ** 2) {
+            let possibleColors = ["#a20a0a", "#D00D0D", "#8C0909", "#460404", "#F11D1D"];
+            //this.color = possibleColors[Math.floor(Math.random() * possibleColors.length)];
+        }
+    }
 }
 
+
+function moveBalls(mouseEvent)
+{
+    var obj = document.getElementById("review-canvas");
+    var obj_left = 0;
+    var obj_top = 0;
+    var xpos;
+    var ypos;
+    while (obj.offsetParent)
+    {
+      obj_left += obj.offsetLeft;
+      obj_top += obj.offsetTop;
+      obj = obj.offsetParent;
+    }
+  if (mouseEvent)
+  {
+    xpos = mouseEvent.screenX;
+    ypos = mouseEvent.screenY;
+  }
+  console.log(xpos);
+  for (let i = 0; i < drawingCanvas.balls.length; i++) {
+      drawingCanvas.balls[i].punch(xpos - obj_left, ypos - obj_top);
+  }
+}
+
+window.onmousemove = moveBalls;
 
 window.onload = updateReview();
 window.onload = drawingCanvas.start();
